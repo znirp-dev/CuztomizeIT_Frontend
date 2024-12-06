@@ -68,7 +68,7 @@ function Home() {
                 {/* Centered Motivational Quote */}
                 <div className="absolute inset-0 flex items-center justify-center text-center w-full">
                     <div className="text-white absolute mx-10 bottom-32">
-                        <p className="bg-black/60 p-1 rounded-lg text-sm lg:text-5xl font-bold">{randomQuote}</p>
+                        <p className="bg-black/60 p-1 rounded-lg text-sm lg:text-4xl font-bold">{randomQuote}</p>
                     </div>
                 </div>
                 </div>

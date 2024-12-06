@@ -5,10 +5,10 @@ function About() {
   return (
     <div className='w-full h-screen bg-[#ffffff]'>
         <div className='w-full h-full flex items-center justify-center'> 
-            <div className='flex flex-col items-center justify-center gap-10'>
+            <div className='flex flex-col items-center justify-center gap-5 lg:gap-10'>
                 <div className='w-2/3 flex flex-col gap-5'>
-                    <h1 className='text-4xl font-bold'>About Us</h1>
-                    <p className='text-lg font-normal'>at CuztomizeIT, we are passionate about delivering high-quality digital solutions that drive success for businesses and organizations across various industries. Specializing in custom websites and mobile applications, we focus on creating user-centric, innovative, and scalable systems that make a real impact.
+                    <h1 className='text-lg lg:text-4xl font-bold'>About Us</h1>
+                    <p className='text-xs lg:text-lg font-normal'>at CuztomizeIT, we are passionate about delivering high-quality digital solutions that drive success for businesses and organizations across various industries. Specializing in custom websites and mobile applications, we focus on creating user-centric, innovative, and scalable systems that make a real impact.
 
                     Our team of expert developers, designers, and project managers work collaboratively with each client to understand their unique needs and deliver tailored solutions that exceed expectations. Whether you need a robust website, a seamless mobile app, or a complex system integration, we are committed to providing solutions that are not only functional but also engaging and efficient.
 
@@ -17,7 +17,7 @@ function About() {
                     Let us help you bring your ideas to life and take your digital presence to the next level.
                     </p>
                 </div>
-                <Link to={'/'} className='bg-[#333333] text-white text-xs font-bold px-6 py-2 rounded-md shadow-md'>Explore !</Link>
+                <Link to={'/'} className='bg-[#333333] text-white text-[10px] lg:text-xs font-bold px-4 lg:px-6 py-2 rounded-md shadow-md'>Explore !</Link>
             </div>
         </div>
     </div>
