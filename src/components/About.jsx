@@ -1,27 +1,56 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function About() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleDescription = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className='w-full h-screen bg-[#ffffff]'>
-        <div className='w-full h-full flex items-center justify-center'> 
-            <div className='flex flex-col items-center justify-center gap-5 lg:gap-10'>
-                <div className='w-2/3 flex flex-col gap-5'>
-                    <h1 className='text-lg lg:text-4xl font-bold'>About Us</h1>
-                    <p className='text-xs lg:text-lg font-normal'>at CuztomizeIT, we are passionate about delivering high-quality digital solutions that drive success for businesses and organizations across various industries. Specializing in custom websites and mobile applications, we focus on creating user-centric, innovative, and scalable systems that make a real impact.
+      <div className='w-full h-full flex items-center justify-center'>
+        <div className='w-4/6 flex flex-col items-center justify-center gap-5 lg:gap-10'>
+          <div className='flex flex-col lg:flex-row items-center justify-center gap-10'>
+            <div className='lg:w-3/5 flex flex-col gap-5'>
+              <h1 className='text-lg lg:text-4xl font-bold'>About Us</h1>
 
-                    Our team of expert developers, designers, and project managers work collaboratively with each client to understand their unique needs and deliver tailored solutions that exceed expectations. Whether you need a robust website, a seamless mobile app, or a complex system integration, we are committed to providing solutions that are not only functional but also engaging and efficient.
+              {/* Description with line-clamp and toggle functionality */}
+              <p className={`text-xs font-normal ${isExpanded ? '' : 'line-clamp-6'}`}>
+                At CuztomizeIT, we specialize in delivering high-quality digital solutions that empower businesses across industries. From custom websites to mobile apps, we create user-centric, innovative, and scalable systems that drive real impact.
 
-                    With a strong emphasis on quality, transparency, and customer satisfaction, we ensure that every project is delivered on time, within budget, and to the highest standards. A, we don't just build projects—we build long-lasting partnerships that help your business thrive in an ever-evolving digital landscape.
+Our team of expert developers, designers, and project managers works closely with clients to deliver tailored solutions that exceed expectations. Whether you need a website, mobile app, or system integration, we ensure functional, engaging, and efficient results.
 
-                    Let us help you bring your ideas to life and take your digital presence to the next level.
-                    </p>
-                </div>
-                <Link to={'/'} className='bg-[#333333] text-white text-[10px] lg:text-xs font-bold px-4 lg:px-6 py-2 rounded-md shadow-md'>Explore !</Link>
+With a focus on quality, transparency, and customer satisfaction, we build long-lasting partnerships to help your business thrive in the digital world.
+
+Let us bring your ideas to life and elevate your digital presence.
+              </p>
+
+              {/* See More / See Less Button */}
+              <button
+                onClick={toggleDescription}
+                className='text-xs text-blue-500 underline mt-2'>
+                {isExpanded ? 'See Less' : 'See More'}
+              </button>
             </div>
+
+            <div className='w-full lg:w-1/4 flex flex-col items-center space-y-2'>
+              <img
+                src={`/images/logo.png`} // Path to your images
+                alt={`Slide`}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+
+          <Link to={'/'} className='bg-[#333333] text-white text-[10px] lg:text-xs font-bold px-4 lg:px-6 py-2 rounded-md shadow-md'>
+            Explore !
+          </Link>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

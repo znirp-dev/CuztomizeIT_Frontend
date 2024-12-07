@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "name": "Dynamic Website",
+      "image": "/images/platform12.jpg",
+      "price": 1200
+    },
+    {
+      "id": 2,
+      "name": "Mobile Application",
+      "image": "/images/platform11.jpg",
+      "price": 2500
+    },
+    {
+      "id": 3,
+      "name": "Case Study",
+      "image": "/images/image3.jpg",
+      "price": 500
+    },
+    {
+      "id": 4,
+      "name": "Thesis / Capstone",
+      "image": "/images/image4.jpg",
+      "price": 800
+    },
+    {
+      "id": 5,
+      "name": "E-commerce Platform",
+      "image": "/images/gaming_mouse.jpg",
+      "price": 3000
+    },
+    {
+      "id": 6,
+      "name": "Portfolio Website",
+      "image": "/images/platform14.jpg",
+      "price": 700
+    },
+    {
+      "id": 7,
+      "name": "Landing Page",
+      "image": "/images/gaming_mouse3.jpg",
+      "price": 400
+    },
+    {
+      "id": 8,
+      "name": "Web App",
+      "image": "/images/platform1.jpg",
+      "price": 1500
+    },
+    {
+      "id": 9,
+      "name": "Content Management System",
+      "image": "/images/platform2.jpg",
+      "price": 2000
+    },
+    {
+      "id": 10,
+      "name": "Graphic Design Project",
+      "image": "/images/platform17.jpg",
+      "price": 600
+    },
+    {
+      "id": 11,
+      "name": "Machine Learning Model",
+      "image": "/images/platform5.jpg",
+      "price": 4500
+    },
+    {
+      "id": 12,
+      "name": "Data Visualization Dashboard",
+      "image": "/images/platform4.jpg",
+      "price": 3500
+    },
+    {
+      "id": 13,
+      "name": "Social Media Campaign",
+      "image": "/images/platform16.jpg",
+      "price": 1000
+    },
+    {
+      "id": 14,
+      "name": "Virtual Reality Application",
+      "image": "/images/platform8.jpg",
+      "price": 5000
+    },
+    {
+      "id": 15,
+      "name": "Augmented Reality Demo",
+      "image": "/images/platform15.jpg",
+      "price": 4000
+    },
+    {
+      "id": 16,
+      "name": "Search Engine Optimization",
+      "image": "/images/image4.jpg",
+      "price": 1500
+    },
+    {
+      "id": 17,
+      "name": "Marketing Automation Tool",
+      "image": "/images/image1.jpg",
+      "price": 2500
+    },
+    {
+      "id": 18,
+      "name": "Cloud Computing Service",
+      "image": "/images/image2.jpg",
+      "price": 3000
+    },
+    {
+      "id": 19,
+      "name": "Chatbot Integration",
+      "image": "/images/platform9.jpg",
+      "price": 2000
+    },
+    {
+      "id": 20,
+      "name": "Blockchain Application",
+      "image": "/images/platform7.jpg",
+      "price": 6000
+    }
+  ]
+  
