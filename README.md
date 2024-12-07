@@ -1,13 +1,10 @@
-CuztomizeIT
+# CuztomizeIT
 
+**Project by:** Prince Louie Paquiado
 
-project by: Prince Louie Paquiado
+**Built with:** React JS, TailwindCSS
 
+## Live Demo
 
-made by: React JS, TailwindCSS
-
-
-Live Demo:
-
-
-https://cuztomizeit.netlify.app/
+You can view the live demo of the project here:  
+[https://cuztomizeit.netlify.app/](https://cuztomizeit.netlify.app/)
