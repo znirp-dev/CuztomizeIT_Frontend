@@ -1,24 +1,32 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import products from './products.json';
 
 function Home() {
     const navigate = useNavigate();
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [randomServices, setRandomServices] = useState([]);
 
+    // Randomize and select 6 services
+    useEffect(() => {
+        const shuffled = products.sort(() => 0.5 - Math.random());
+        setRandomServices(shuffled.slice(0, 6));
+    }, []);
     // Array of image filenames
     const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
 
     // Array of motivational quotes for programmers
     const quotes = [
-        "Code is like humor. If you have to explain it, it's bad.",
-        "Simplicity is the soul of efficiency.",
-        "First, solve the problem. Then, write the code.",
-        "Debugging is like being the detective in a crime movie.",
-        "Experience is the name everyone gives to their mistakes.",
-        "The hard part is deciding what problems to solve.",
-        "The best error message is the one that never shows up.",
+        "Code is craft.",
+        "Write for humans.",
+        "Simple is better.",
+        "Solve, then code.",
+        "Bugs teach wisdom.",
+        "Solve the right problem.",
+        "No error is best."
     ];
+    
     // axios.defaults.withCredentials = true;
     // useEffect(() => {
     //     axios.get('http://localhost:3000/auth/verify').then(res => {
@@ -97,50 +105,43 @@ function Home() {
                 </div>
             </div>
 
-            <div className='w-full flex items-center justify-center my-10 lg:my-20'>
-                <div className='w-4/5 flex flex-col gap-5'>
-                    <h1 className='text-lg font-bold'>
-                        Services
-                    </h1>
-                    <div className='flex flex-col lg:flex-row gap-10'>
-                        <div className='w-full lg:w-1/4 flex flex-col items-center space-y-2'>
-                            <img
-                                src={`/images/image1.jpg`} // Path to your images
-                                alt={`Slide`}
-                                className="w-full h-full object-cover"
-                            />
-                            <p className='text-xs font-bold'>Dynamic Website</p>
-                        </div>
-                        <div className='w-full lg:w-1/4 flex flex-col items-center space-y-2'>
-                            <img
-                                src={`/images/image2.jpg`} // Path to your images
-                                alt={`Slide`}
-                                className="w-full h-full object-cover"
-                            />
-                            <p className='text-xs font-bold'>Mobile Application</p>
-                        </div>
-                        <div className='w-full lg:w-1/4 flex flex-col items-center space-y-2'>
-                            <img
-                                src={`/images/image3.jpg`} // Path to your images
-                                alt={`Slide`}
-                                className="w-full h-full object-cover"
-                            />
-                            <p className='text-xs font-bold'>Case Study</p>
-                        </div>
-                        <div className='w-full lg:w-1/4 flex flex-col items-center space-y-2'>
-                            <img
-                                src={`/images/image4.jpg`} // Path to your images
-                                alt={`Slide`}
-                                className="w-full h-full object-cover"
-                            />
-                            <p className='text-xs font-bold'>Thesis / Capstone</p>
-                        </div>
+            <div className="w-full flex items-center justify-center my-10 lg:my-20">
+                <div className="w-4/5 flex flex-col gap-5">
+                    <h1 className="text-lg font-bold">Services</h1>
+                    <div className="flex flex-col lg:flex-row gap-10 justify-center">
+                        {randomServices.map((service, index) => (
+                            <div
+                                key={index}
+                                className="w-full lg:w-1/4 flex flex-col items-center space-y-2"
+                            >
+                                <img
+                                    src={service.image} // Path from JSON
+                                    alt={service.name}
+                                    className="w-full h-40 object-cover rounded-md"
+                                />
+                                <p className="text-xs font-bold">{service.name}</p>
+                            </div>
+                        ))}
                     </div>
-                    <div className='flex items-center justify-center mt-5'>
-                        <Link to={'/shop'} className='bg-[#333333] flex flex-row items-center justify-center gap-1 text-white text-[10px] lg:text-xs font-bold px-4 lg:px-6 py-2 rounded-md shadow-md'>
-                            See More 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="size-3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    <div className="flex items-center justify-center mt-5">
+                        <Link
+                            to={'/shop'}
+                            className="bg-[#333333] flex flex-row items-center justify-center gap-1 text-white text-[10px] lg:text-xs font-bold px-4 lg:px-6 py-2 rounded-md shadow-md"
+                        >
+                            See More
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="4"
+                                stroke="currentColor"
+                                className="size-3"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                                />
                             </svg>
                         </Link>
                     </div>
